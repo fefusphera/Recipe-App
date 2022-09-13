@@ -1,0 +1,23 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+ul {
+  // border: 2px solid green;
+  width: fit-content;
+  padding: 0;
+}
+
+.MainCatalog {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+
+  .Title {
+    color: $third-color;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+}

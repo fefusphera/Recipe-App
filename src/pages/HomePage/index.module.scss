@@ -1,0 +1,39 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.HomePage {
+  // @include display(flex, column, center, center, nowrap, 0);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  height: 100vh;
+  //   background-color: $bg-color;
+  .Title {
+    margin-top: 0;
+    font-size: 40px;
+    color: $third-color;
+  }
+  .Paragraph {
+    margin: 20px;
+    font-size: 20px;
+    color: $third-color;
+    font-weight: bold;
+  }
+
+  .HomePageImg {
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 3px #54242698;
+  }
+
+  .ParagraphHappy {
+    margin: 20px;
+    font-size: 20px;
+    color: $third-color;
+    font-weight: bold;
+  }
+}

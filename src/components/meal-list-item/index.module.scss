@@ -1,0 +1,25 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.MealListItem {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  //   border: 2px solid red;
+  @include display();
+  max-width: 300px;
+  .thumbnail {
+    // border: 2px solid blue;
+    max-width: 150px;
+    border-radius: 100%;
+  }
+  .link {
+    text-decoration: none;
+    color: $third-color;
+    font-weight: bold;
+    cursor: pointer;
+    &:visited {
+      color: $third-color;
+    }
+  }
+}

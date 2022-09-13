@@ -1,0 +1,11 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.CategoryList {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include display(flex, column, center, center, nowrap);
+  //   width: 100vw;
+  //   border: 2px solid red;
+}
