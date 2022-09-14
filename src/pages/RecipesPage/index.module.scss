@@ -1,0 +1,33 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.RecipesPage {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+
+  .titles {
+    @include display();
+
+    .categoryName {
+      color: $third-color;
+      font-size: 20px;
+    }
+    .recipeName {
+      color: $third-color;
+      font-size: 20px;
+    }
+  }
+  .instructionsCard {
+    @include display();
+    .instructionsTitle {
+      font-size: 20px;
+      color: $third-color;
+    }
+    .Instructions {
+      padding: 15px;
+      color: $third-color;
+    }
+  }
+}
