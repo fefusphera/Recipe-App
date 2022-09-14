@@ -9,6 +9,9 @@ export const ENDPOINTS = {
   get CATEGORIES() {
     return `${this.BASE}/categories.php`;
   },
+  get DETEAIL() {
+    return `${this.BASE}/lookup.php`;
+  },
 };
 
 //---DOCUMENTAZIONE MEAL DB
@@ -27,6 +30,11 @@ export const ENDPOINTS = {
 // www.themealdb.com/api/json/v1/1/categories.php
 
 //BASE + /CATEGORIES.PHP
+
+//Singola ricetta
+//https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+
+//BASE + /LOOKUP.PHP ?i={id ricetta}
 
 //CATEGORY
 

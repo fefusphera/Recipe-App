@@ -62,3 +62,11 @@ quel {/:categoryName} è il nostro UseParams che ci andiamo a richiamare nella p
 This /:name can be anything, as long as it matches with the parameters/keys of your data. This is also the key when we need to use useParams later on.
 
 First off, we need to make sure the { name } matches with our /explore/:name parameter. Basically, you can name the parameter anything you want, but you would want to match with one of the key in your list so there’s no confusion.
+
+---ESERCIZI
+
+vedere cos'è useContext [ok]
+formattare i dati della singola ricetta
+pagina di dettaglio ricetta
+Inserire usando sub-routes delle tab contententi: Istruzioni, Ingredienti, video di YouTube
+Scrivere poca UI
