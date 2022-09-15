@@ -1,0 +1,14 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.instructionsCard {
+  @include display();
+  .instructionsTitle {
+    font-size: 20px;
+    color: $third-color;
+  }
+  .Instructions {
+    padding: 15px;
+    color: $third-color;
+  }
+}

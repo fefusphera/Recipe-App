@@ -27,9 +27,9 @@ function App() {
             path="/catalogo/:categoryName/:recipeName/:id"
             element={<RecipesPage />}
           >
-            <Route path="istruzioni" element={<RecipeInstructions />} />
+            <Route path="instructions" element={<RecipeInstructions />} />
             <Route path="youtube" element={<RecipeYouTube />} />
-            <Route path="ingredienti" element={<RecipeIngredient />} />
+            <Route path="ingredients" element={<RecipeIngredient />} />
           </Route>
           <Route path="*" element={<ErrorPage status={404} />} />
         </Routes>

@@ -6,6 +6,22 @@
   padding: 0;
   box-sizing: border-box;
   width: 100vw;
+  margin-top: 2rem;
+
+  .CategoryLink {
+    text-decoration: none;
+    background-color: #54242698;
+
+    padding: 5px;
+    color: $primary-color;
+    text-shadow: 0 0 3px black;
+    font-size: 15px;
+
+    border-radius: 5px;
+    &:visited {
+      text-decoration: none;
+    }
+  }
 
   .titles {
     @include display();
@@ -14,6 +30,7 @@
       color: $third-color;
       font-size: 20px;
     }
+
     .recipeName {
       color: $third-color;
       font-size: 20px;
@@ -22,15 +39,37 @@
   .RecipeImg {
     width: 300px;
   }
-  .instructionsCard {
-    @include display();
-    .instructionsTitle {
-      font-size: 20px;
-      color: $third-color;
-    }
-    .Instructions {
-      padding: 15px;
-      color: $third-color;
+
+  .navTab {
+    width: 100vw;
+    @include display(flex, row, center, space-around, nowrap);
+    // border: 2px solid red;
+    justify-content: space-around;
+    color: $third-color;
+
+    .navItem {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .link {
+        text-decoration: none;
+        background-color: #54242698;
+        // border: 1px solid black;
+        padding: 5px;
+        color: $primary-color;
+        text-shadow: 0 0 3px black;
+        font-size: 15px;
+        // font-weight: bold;
+        border-radius: 5px;
+        &:visited {
+          text-decoration: none;
+        }
+      }
+
+      :visited {
+        text-decoration: none;
+      }
     }
   }
 }

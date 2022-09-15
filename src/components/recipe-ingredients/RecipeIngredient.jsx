@@ -7,9 +7,8 @@ const RecipeIngredient = () => {
 
   const indexes = Array.from({ length: 20 }, (_, i) => i + 1);
 
-  console.log(recipe.meals[0].strYoutube);
   // console.log(indexes);
-  console.log(`recipe.meals[0].strIngredient${indexes}`);
+  // console.log(`recipe.meals[0].strIngredient${indexes}`);
 
   return (
     <div>

@@ -27,16 +27,18 @@ const RecipesPage = () => {
   // console.log("instruction:", data.meals[0]?.strInstructions);
 
   const tabs = [
-    { label: "Ricetta", path: "./istruzioni" },
-    { label: "Ingredienti", path: "./ingredienti" },
+    { label: "Recipe", path: "./instructions" },
+    { label: "Ingredients", path: "./ingredients" },
     { label: "YouTube", path: "./youtube" },
   ];
 
   return (
     <div className={styles.RecipesPage}>
-      <Link to={`/catalogo/${categoryName}`}>{categoryName}</Link>
+      <Link to={`/catalogo/${categoryName}`} className={styles.CategoryLink}>
+        {categoryName}
+      </Link>
       <div className={styles.titles}>
-        <h1 className={styles.categoryName}> Category: {categoryName}</h1>
+        {/* <h1 className={styles.categoryName}> Category: {categoryName}</h1> */}
         <h1 className={styles.recipeName}>{recipeName}</h1>
       </div>
       <img
@@ -44,16 +46,13 @@ const RecipesPage = () => {
         src={data.meals[0]?.strMealThumb}
         alt={recipeName}
       />
-      {/* <div className={styles.instructionsCard}>
-        <h1 className={styles.instructionsTitle}>INSTRUCTIONS:</h1>
-        <p className={styles.Instructions}>{data.meals[0]?.strInstructions}</p>
-      </div> */}
-      <ul className="nav nav-tabs">
+
+      <ul className={styles.navTab}>
         {tabs.map(({ label, path }) => (
-          <li className="nav-item" key={path}>
+          <li className={styles.navItem} key={path}>
             <NavLink
               className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : "not-active"}`
+                isActive ? `${styles.link} ${styles.link_active}` : styles.link
               }
               to={path}
             >

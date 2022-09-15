@@ -70,3 +70,28 @@ formattare i dati della singola ricetta
 pagina di dettaglio ricetta
 Inserire usando sub-routes delle tab contententi: Istruzioni, Ingredienti, video di YouTube
 Scrivere poca UI
+
+- Esercizio di ieri
+- Link [end]
+- Navigate e useNavigate
+- useSearchParams
+- props nei link, useLocation
+- Route guards
+
+----Documentazione:
+
+NavLink:
+A special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL.
+<NavLink to="/about">About</NavLink>
+
+className: string | func
+className can either be a string or a function that returns a string. If the function className is used, the link’s active state is passed as a parameter. This is helpful if you want to exclusively apply a className to an inactive link.
+
+<NavLink
+to="/faq"
+className={isActive =>
+"nav-link" + (!isActive ? " unselected" : "")
+}
+
+> FAQs
+> </NavLink>
