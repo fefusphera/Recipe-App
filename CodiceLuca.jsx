@@ -69,3 +69,14 @@ export const Recipe = (props) => {
 };
 
 export default Recipe;
+
+<Route path=":categoryName">
+  <Route path="" element={<Category />} />
+
+  <Route path=":recipeName/:id" element={<Recipe />}>
+    <Route path="" element={<Navigate to="./istruzioni" />} />
+    <Route path="istruzioni" element={<RecipeInstructions />} />
+    <Route path="youtube" element={<RecipeYouTube />} />
+    <Route path="ingredienti" element={<RecipeIngredients />} />
+  </Route>
+</Route>;

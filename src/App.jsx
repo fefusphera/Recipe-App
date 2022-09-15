@@ -7,6 +7,9 @@ import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 import MealsPage from "./pages/MealsPage";
 import RecipesPage from "./pages/RecipesPage";
+import RecipeIngredient from "./components/recipe-ingredients";
+import RecipeInstructions from "./components/recipe-instructions";
+import RecipeYouTube from "./components/recipe-youtube";
 
 import "./App.css";
 
@@ -23,7 +26,11 @@ function App() {
           <Route
             path="/catalogo/:categoryName/:recipeName/:id"
             element={<RecipesPage />}
-          />
+          >
+            <Route path="istruzioni" element={<RecipeInstructions />} />
+            <Route path="youtube" element={<RecipeYouTube />} />
+            <Route path="ingredienti" element={<RecipeIngredient />} />
+          </Route>
           <Route path="*" element={<ErrorPage status={404} />} />
         </Routes>
       </BrowserRouter>

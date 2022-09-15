@@ -19,6 +19,9 @@
       font-size: 20px;
     }
   }
+  .RecipeImg {
+    width: 300px;
+  }
   .instructionsCard {
     @include display();
     .instructionsTitle {
