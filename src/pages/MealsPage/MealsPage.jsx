@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { ENDPOINTS } from "../../utils/endpoints";
 import { useFetch } from "../../utils/use-fetch";
 import MealList from "../../components/meal-list";
@@ -9,17 +9,19 @@ const MealsPage = () => {
   const params = useParams();
   const { categoryName } = params;
 
-  const { data, loading, error } = useFetch(
-    `${ENDPOINTS.FILTER}?c=${categoryName}`
-  );
+  const data = useLoaderData();
 
-  if (loading) {
-    return "Caricamento...";
-  }
+  // const { data, loading, error } = useFetch(
+  //   `${ENDPOINTS.FILTER}?c=${categoryName}`
+  // );
 
-  if (!data?.meals?.length) {
-    return "Not found";
-  }
+  // if (loading) {
+  //   return "Caricamento...";
+  // }
+
+  // if (!data?.meals?.length) {
+  //   return "Not found";
+  // }
 
   return (
     <div>

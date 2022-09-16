@@ -95,3 +95,14 @@ className={isActive =>
 
 > FAQs
 > </NavLink>
+
+USE SEARCH PARAMS
+
+The useSearchParams hook is used to Read and Modify the query string in the URL for the current location. Similar to the useState hook of React, the useSearchParams hook of React Router returns an array with two elements: the first is the current location’s search params and the latter is a function that can be used to update them:
+
+import { useSearchParams } from 'react-router-dom';
+
+const App = () => {
+const [searchParams, setSearchParams] = useSearchParams();
+return /_ ... _/
+}

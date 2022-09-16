@@ -5,25 +5,32 @@
 import styles from "./index.module.scss";
 import { ENDPOINTS } from "../../utils/endpoints";
 import { useFetch } from "../../utils/use-fetch";
-import { useParams, Link, NavLink, Outlet } from "react-router-dom";
+import {
+  useParams,
+  Link,
+  NavLink,
+  Outlet,
+  useLoaderData,
+} from "react-router-dom";
 
 const RecipesPage = () => {
   const params = useParams();
   const { categoryName, recipeName, id } = params;
+  const data = useLoaderData();
 
-  const { data, loading, error } = useFetch(`${ENDPOINTS.DETEAIL}?i=${id}`);
+  // const { data, loading, error } = useFetch(`${ENDPOINTS.DETEAIL}?i=${id}`);
 
-  const recipe = data;
+  // const recipe = data;
   // console.log(recipe);
 
-  if (loading) {
-    return "Caricamento...";
-  }
+  // if (loading) {
+  //   return "Caricamento...";
+  // }
 
   if (!data?.meals?.length) {
     return "Not found";
   }
-
+  console.log("CONSOLE LOG RECIPES PAGE", data);
   // console.log("instruction:", data.meals[0]?.strInstructions);
 
   const tabs = [
@@ -48,7 +55,7 @@ const RecipesPage = () => {
       />
 
       <ul className={styles.navTab}>
-        {tabs.map(({ label, path }) => (
+        {tabs?.map?.(({ label, path }) => (
           <li className={styles.navItem} key={path}>
             <NavLink
               className={({ isActive }) =>
@@ -61,7 +68,7 @@ const RecipesPage = () => {
           </li>
         ))}
       </ul>
-      <Outlet context={recipe} />
+      <Outlet context={data} />
     </div>
   );
 };

@@ -3,13 +3,16 @@ import styles from "./index.module.scss";
 import { ENDPOINTS } from "../../utils/endpoints.js";
 import { useFetch } from "../../utils/use-fetch.js";
 import CategoryList from "../../components/category-list";
+import { useLoaderData } from "react-router-dom";
 
 const CatalogPage = () => {
-  const { data, loading, error } = useFetch(ENDPOINTS.CATEGORIES);
+  // const { data, loading, error } = useFetch(ENDPOINTS.CATEGORIES);
 
-  if (loading) {
-    return "Loading...";
-  }
+  // if (loading) {
+  //   return "Loading...";
+  // }
+
+  const data = useLoaderData();
 
   return (
     <div className={styles.MainCatalog}>
