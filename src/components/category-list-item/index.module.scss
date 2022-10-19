@@ -5,20 +5,34 @@
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  //   border: 2px solid red;
+  position: relative;
   @include display();
   max-width: 300px;
   .thumbnail {
-    // border: 2px solid blue;
     max-width: 150px;
   }
-  .link {
+
+  .title {
     text-decoration: none;
     color: $third-color;
     font-weight: bold;
-    cursor: pointer;
-    &:visited {
-      color: $third-color;
-    }
+  }
+  // .link {
+  //   text-decoration: none;
+  //   color: $third-color;
+  //   font-weight: bold;
+  //   cursor: pointer;
+  //   &:visited {
+  //     color: $third-color;
+  //   }
+  // }
+
+  .link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
   }
 }

@@ -12,6 +12,7 @@ const CategoryListItem = (props) => {
           src={category.strCategoryThumb}
           alt={`preview of ${category.strCategory} category`}
         />
+        <h3 className={styles.title}>{category.strCategory}</h3>
       </div>
       {/* <div className={styles.content}>
         <h3 className={styles.title}>{category.strCategory}</h3>

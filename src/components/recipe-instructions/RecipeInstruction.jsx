@@ -10,7 +10,7 @@ const RecipeInstruction = () => {
 
   return (
     <div className={styles.instructionsCard}>
-      <h1 className={styles.instructionsTitle}>INSTRUCTIONS:</h1>
+      {/* <h1 className={styles.instructionsTitle}>Instructions:</h1> */}
       <p className={styles.Instructions}>
         {data.meals[0].strInstructions}
         {/* {instructions} */}

@@ -1,0 +1,18 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.recipeDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .list {
+    font-size: 20px;
+    color: $third-color;
+    list-style-type: none;
+  }
+  .listEl {
+    padding: 5px;
+    text-decoration: underline;
+  }
+}

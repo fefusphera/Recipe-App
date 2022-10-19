@@ -11,14 +11,14 @@ const RecipeIngredient = () => {
   // console.log(`recipe.meals[0].strIngredient${indexes}`);
 
   return (
-    <div>
-      <h1>Ingredienti:</h1>
-      <ul>
+    <div className={styles.recipeDiv}>
+      {/* <h1 className={styles.title}>Ingredients:</h1> */}
+      <ul className={styles.list}>
         {!!recipe &&
           indexes.map((index) => (
             <Fragment key={index}>
               {recipe.meals[0][`strIngredient${index}`]?.length ? (
-                <li>
+                <li className={styles.listEl}>
                   {recipe.meals[0][`strIngredient${index}`]}:
                   {recipe.meals[0][`strMeasure${index}`]}
                 </li>
