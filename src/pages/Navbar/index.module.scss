@@ -2,39 +2,39 @@
 @import "../../style/variables";
 
 .MainNavbar {
-  // height: 10vh;
+  height: 10vh;
   background-color: #542426;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
     url(https://i.pinimg.com/originals/57/c0/2c/57c02c2205c458ce7971c20108f183a1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 30px;
-  position: relative;
 
-  .NavbarImg {
-    width: 150px;
-    margin: 0;
-    padding: 0;
+  padding: 30px;
+
+  .Navbar {
+    @include display(flex, row, center, center, nowrap);
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+      background-color: #54242698;
+      // border: 1px solid black;
+      padding: 5px;
+      color: $primary-color;
+
+      text-shadow: 0 0 3px black;
+      font-size: 20px;
+      // font-weight: bold;
+      border-radius: 5px;
+      &:visited {
+        text-decoration: none;
+      }
+    }
   }
 }
 
-.Navbar {
-  @include display(flex, row, center, center, nowrap);
-  justify-content: space-around;
-  a {
-    text-decoration: none;
-    background-color: #54242698;
-    // border: 1px solid black;
-    padding: 5px;
-    color: $primary-color;
-
-    text-shadow: 0 0 3px black;
-    font-size: 15px;
-    // font-weight: bold;
-    border-radius: 5px;
-    &:visited {
-      text-decoration: none;
-    }
-  }
+.NavbarImg {
+  width: 100px;
+  transform: translate(-120px, 500px);
+  position: absolute;
 }
